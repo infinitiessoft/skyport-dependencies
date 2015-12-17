@@ -1,0 +1,1108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.infinities.skyport</groupId>
+	<artifactId>skyport-dependencies</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Skyport Dependencies</name>
+	<description>Skyport Dependencies</description>
+	<organization>
+		<name>InfinitiesSoft, Inc.</name>
+		<url>http://www.infinitiessoft.com/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Skyport Dependencies -->
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-core</artifactId>
+				<version>3.4.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-driver</artifactId>
+				<version>3.4.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-api</artifactId>
+				<version>3.4.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-entity</artifactId>
+				<version>3.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-websockify</artifactId>
+				<version>3.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-ui</artifactId>
+				<version>3.2.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-jpa</artifactId>
+				<version>3.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-security</artifactId>
+				<version>3.2.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-hazelcast</artifactId>
+				<version>3.4.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>skyport-distributed</artifactId>
+				<version>3.2.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>cloud-openstack</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>cloud-mock</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.infinities.skyport</groupId>
+				<artifactId>nova2.0-api</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+			<!-- Dasein clouds -->
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-core</artifactId>
+				<version>2015.10.1</version>
+				<exclusions>
+					<!-- <exclusion> <groupId>commons-logging</groupId> <artifactId>commons-logging</artifactId> 
+						</exclusion> -->
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-aws</artifactId>
+				<version>2015.10.4</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-azure</artifactId>
+				<version>2015.10.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-azurepack</artifactId>
+				<version>2015.10.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-cloudstack</artifactId>
+				<version>2015.10.5</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-digitalocean</artifactId>
+				<version>2015.10.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-google</artifactId>
+				<version>2015.10.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-joyent</artifactId>
+				<version>2015.10.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-openstack</artifactId>
+				<version>2015.10.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-vcloud</artifactId>
+				<version>2015.10.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-virtustream</artifactId>
+				<version>2015.10.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-vsphere</artifactId>
+				<version>2015.10.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+
+			<!-- Unupgrade Dasein clouds -->
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-asm</artifactId>
+				<version>2013.07.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-atmos</artifactId>
+				<version>2013.07</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-cloudsigma</artifactId>
+				<version>2013.07.4</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-gogrid</artifactId>
+				<version>2013.07</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-ibm</artifactId>
+				<version>2013.07</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-opsource</artifactId>
+				<version>2013.07.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-terremark</artifactId>
+				<version>2013.07.3</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-zimory</artifactId>
+				<version>2013.07</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-mock</artifactId>
+				<version>2013.02</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dasein</groupId>
+				<artifactId>dasein-cloud-rackspace</artifactId>
+				<version>2013.02</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+
+			<!-- other dependencies -->
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>14.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vmware</groupId>
+				<artifactId>vijava</artifactId>
+				<version>5.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.amazonaws</groupId>
+				<artifactId>aws-java-sdk</artifactId>
+				<version>1.9.0</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<!--if add it into the </dependencyManagement>, it does not work -->
+				<groupId>com.taobao</groupId>
+				<artifactId>taobao-sdk-java-auto</artifactId>
+				<version>1429086946793-20150515</version>
+			</dependency>
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.cloudbees.thirdparty</groupId>
+				<artifactId>vijava</artifactId>
+				<version>5.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.java.dev.vcc.thirdparty</groupId>
+				<artifactId>xen-api</artifactId>
+				<version>6.2.0-3.1</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>2.3</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty</artifactId>
+				<version>3.8.0.Final</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sourceforge.expectj</groupId>
+				<artifactId>expectj</artifactId>
+				<version>2.0.7</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.3.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.8.3</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.snmp4j</groupId>
+				<artifactId>snmp4j</artifactId>
+				<version>1.10.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- <dependency> <groupId>com.hazeltask</groupId> <artifactId>hazeltask-core</artifactId> 
+				<version>1.0.6</version> </dependency> -->
+
+			<!-- hazelcast for distributed -->
+			<dependency>
+				<groupId>com.hazelcast</groupId>
+				<artifactId>hazelcast</artifactId>
+				<version>3.3-EA</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.jcip</groupId>
+				<artifactId>jcip-annotations</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>1.53</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpkix-jdk15on</artifactId>
+				<version>1.53</version>
+			</dependency>
+
+			<!-- <dependency> <groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk16</artifactId> 
+				<version>1.46</version> </dependency> <dependency> <groupId>org.bouncycastle</groupId> 
+				<artifactId>bcmail-jdk16</artifactId> <version>1.46</version> </dependency> -->
+			<!-- <dependency> <groupId>com.googlecode</groupId> <artifactId>kryo</artifactId> 
+				<version>1.04</version> </dependency> -->
+
+
+			<!-- Quartz -->
+			<!-- <dependency> <groupId>org.quartz-scheduler</groupId> <artifactId>quartz</artifactId> 
+				<version>${quartzVersion}</version> <exclusions> replace with bonecp <exclusion> 
+				<groupId>c3p0</groupId> <artifactId>c3p0</artifactId> </exclusion> <exclusion> 
+				<groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> </exclusion> 
+				</exclusions> </dependency> -->
+
+			<!-- Jackson Dependencies -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.datatype</groupId>
+				<artifactId>jackson-datatype-hibernate4</artifactId>
+				<version>${jacksonVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jacksonVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jacksonVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.dataformat</groupId>
+				<artifactId>jackson-dataformat-xml</artifactId>
+				<version>${jacksonVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>${jacksonVersion}</version>
+			</dependency>
+
+			<!-- shiro Dependencies -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-core</artifactId>
+				<version>${shiroVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-web</artifactId>
+				<version>${shiroVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-aspectj</artifactId>
+				<version>${shiroVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-ehcache</artifactId>
+				<version>${shiroVersion}</version>
+			</dependency>
+
+			<!-- Logging (slf4j with logback as an implementation) -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4jVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>1.1.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-access</artifactId>
+				<version>1.1.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>ch.qos.logback</groupId>
+						<artifactId>logback-core</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4jVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4jVersion}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4jVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>4.3</version>
+			</dependency>
+
+			<!-- JPA Dependencies -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>4.1.9.Final</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.jolbox</groupId>
+				<artifactId>bonecp</artifactId>
+				<version>0.7.1.RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>2.3.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>9.1-901-1.jdbc4</version>
+			</dependency>
+
+			<!-- Embedded Tomcat -->
+			<dependency>
+				<groupId>org.apache.tomcat.embed</groupId>
+				<artifactId>tomcat-embed-core</artifactId>
+				<version>${tomcatVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.tomcat.embed</groupId>
+				<artifactId>tomcat-embed-jasper</artifactId>
+				<version>${tomcatVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.tomcat.embed</groupId>
+				<artifactId>tomcat-embed-logging-log4j</artifactId>
+				<version>${tomcatVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-catalina-ha</artifactId>
+				<version>${tomcatVersion}</version>
+			</dependency>
+
+			<!-- <dependency> <groupId>tomcat</groupId> <artifactId>tomcat-juli</artifactId> 
+				<version>5.5.23</version> </dependency> -->
+
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>jsr311-api</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>4.3.5</version>
+			</dependency>
+
+
+			<!-- Junit Dependencies -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>0.1.52</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>3.2.2.RELEASE</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.jclouds</groupId>
+				<artifactId>jclouds-all</artifactId>
+				<version>1.6.1-incubating</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.dbunit</groupId>
+				<artifactId>dbunit</artifactId>
+				<version>2.4.9</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmock</groupId>
+				<artifactId>jmock-junit4</artifactId>
+				<version>2.6.0</version>
+				<exclusions>
+					<exclusion> <!-- Excluded as already a transitive dep of jmock -->
+						<groupId>org.jmock</groupId>
+						<artifactId>jmock</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>junit</groupId>
+						<artifactId>junit-dep</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jmock</groupId>
+				<artifactId>jmock-legacy</artifactId>
+				<version>2.6.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>pl.pragmatists</groupId>
+				<artifactId>JUnitParams</artifactId>
+				<version>1.0.3</version>
+			</dependency>
+
+			<!-- Apache Camel -->
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-core</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-test</artifactId>
+				<version>${camel-version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-jackson</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+
+			<!-- <dependency> <groupId>org.apache.activemq</groupId> <artifactId>activemq-all</artifactId> 
+				<version>${activemq-version}</version> </dependency> -->
+
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-camel</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-pool</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+
+			<!-- Apache Commons Libs -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>
+
+
+			<!-- Jersey Dependencies -->
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>javax.ws.rs-api</artifactId>
+				<version>2.0</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.containers</groupId>
+				<!-- if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core" -->
+				<artifactId>jersey-container-servlet</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-json-jackson</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.containers</groupId>
+				<artifactId>jersey-container-jetty-servlet</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.ext</groupId>
+				<artifactId>jersey-bean-validation</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.test-framework.providers</groupId>
+				<artifactId>jersey-test-framework-provider-grizzly2</artifactId>
+				<version>2.6</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.test-framework</groupId>
+				<artifactId>jersey-test-framework-core</artifactId>
+				<version>2.6</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.containers</groupId>
+				<artifactId>jersey-container-grizzly2-servlet</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- Netbeans library -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>InfinitiesNexusSnapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://infinitiessoft.com:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>InfinitiesNexusReleases</id>
+			<name>infinities skyport Repository</name>
+			<url>http://infinitiessoft.com:8081/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>devzendo-org-repository-releases</id>
+			<name>DevZendo.org Maven2 releases Repository on Google Code</name>
+			<url>http://devzendo-org-repo.googlecode.com/svn/trunk/releases</url>
+		</repository>
+
+		<repository>
+			<id>infinities</id>
+			<name>infinities Nexus Repository</name>
+			<url>http://192.168.0.29:8081/nexus/content/groups/infinities/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.0</version>
+					<configuration>
+						<target>${javaCompilerVersion}</target>
+						<source>${javaCompilerVersion}</source>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId> <!-- or maven-jar-plugin -->
+					<version>2.4</version>
+					<configuration>
+						<archive>
+							<manifestEntries>
+								<Implementation-Title>Infinitiessoft Skyport</Implementation-Title>
+								<Implementation-Vendor>Infinitiessoft</Implementation-Vendor>
+								<Implementation-Version>${project.version}-${maven.build.timestamp}</Implementation-Version>
+								<Build-Time>${maven.build.timestamp}</Build-Time>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>flatten-maven-plugin</artifactId>
+					<!--<version>1.0</version> -->
+					<configuration>
+					</configuration>
+					<executions>
+						<execution>
+							<id>flatten</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>flatten</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.18.1</version>
+					<configuration>
+						<includes>
+							<include>**/*IT.java</include>
+						</includes>
+						<skipTests>true</skipTests>
+						<!-- <groups>com.infinities.skyport.testcase.IntegrationTest</groups> -->
+					</configuration>
+					<executions>
+						<execution>
+							<id>failsafe-integration-tests</id>
+							<phase>integration-test</phase>
+							<goals>
+								<goal>integration-test</goal>
+								<goal>verify</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.18.1</version>
+					<configuration>
+						<!-- <excludedGroups>com.infinities.skyport.testcase.IntegrationTest</excludedGroups> -->
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<properties>
+		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<javaCompilerVersion>1.7</javaCompilerVersion>
+		<quartzVersion>2.2.1</quartzVersion>
+		<shiroVersion>1.2.1</shiroVersion>
+		<slf4jVersion>1.7.6</slf4jVersion>
+		<tomcatVersion>7.0.34</tomcatVersion>
+		<jacksonVersion>2.2.1</jacksonVersion>
+		<!-- <skipITs>false</skipITs> -->
+		<camel-version>2.13.0</camel-version>
+		<activemq-version>5.10.0</activemq-version>
+	</properties>
+
+
+	<developers>
+		<developer>
+			<id>pohsun</id>
+			<name>Pohsun Huang</name>
+			<email>pohsun@infinitiessoft.com</email>
+		</developer>
+		<developer>
+			<id>tata</id>
+			<name>Tata Chen</name>
+			<email>pohsun@infinitiessoft.com</email>
+		</developer>
+		<developer>
+			<id>kevin</id>
+			<name>Kevin Wang</name>
+			<email>kevin@infinitiessoft.com</email>
+		</developer>
+		<developer>
+			<id>nat</id>
+			<name>Nat Tsai</name>
+			<email>natfrank@infinitiessoft.com</email>
+		</developer>
+		<developer>
+			<id>toad</id>
+			<name>Toad Xu</name>
+			<email>toad@infinitiessoft.com</email>
+		</developer>
+	</developers>
+
+</project>
+
+</project>
