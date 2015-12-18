@@ -878,7 +878,6 @@
 				<groupId>javax.ws.rs</groupId>
 				<artifactId>javax.ws.rs-api</artifactId>
 				<version>2.0</version>
-				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
@@ -1013,6 +1012,9 @@
 						<includes>
 							<include>**/*IT.java</include>
 						</includes>
+						<excludes>
+							<exclude>**/ManualIT.java</exclude>
+						</excludes>
 						<skipTests>true</skipTests>
 						<!-- <groups>com.infinities.skyport.testcase.IntegrationTest</groups> -->
 					</configuration>
