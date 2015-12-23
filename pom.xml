@@ -933,12 +933,12 @@
 		<snapshotRepository>
 			<id>InfinitiesNexusSnapshots</id>
 			<name>Internal Snapshots</name>
-			<url>http://infinitiessoft.com:8081/nexus/content/repositories/snapshots</url>
+			<url>http://www.infinitiessoft.com:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
 			<id>InfinitiesNexusReleases</id>
 			<name>infinities skyport Repository</name>
-			<url>http://infinitiessoft.com:8081/nexus/content/repositories/releases/</url>
+			<url>http://www.infinitiessoft.com:8081/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 
@@ -952,7 +952,7 @@
 		<repository>
 			<id>infinities</id>
 			<name>infinities Nexus Repository</name>
-			<url>http://192.168.0.29:8081/nexus/content/groups/infinities/</url>
+			<url>http://www.infinitiessoft.com:8081/nexus/content/groups/infinities/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
