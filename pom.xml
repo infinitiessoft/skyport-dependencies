@@ -87,11 +87,21 @@
 				<artifactId>nova2.0-api</artifactId>
 				<version>1.0.0-SNAPSHOT</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.infinities.keystone4j</groupId>
 				<artifactId>keystone4j-client</artifactId>
 				<version>1.0.0</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.glassfish.hk2</groupId>
+						<artifactId>hk2-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.glassfish.hk2</groupId>
+						<artifactId>hk2-locator</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 			<!-- Dasein clouds -->
@@ -733,25 +743,25 @@
 			<dependency>
 				<groupId>org.apache.tomcat.embed</groupId>
 				<artifactId>tomcat-embed-core</artifactId>
-				<version>${tomcatVersion}</version>
+				<version>${org.apache.tomcat}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.tomcat.embed</groupId>
 				<artifactId>tomcat-embed-jasper</artifactId>
-				<version>${tomcatVersion}</version>
+				<version>${org.apache.tomcat}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.tomcat.embed</groupId>
 				<artifactId>tomcat-embed-logging-log4j</artifactId>
-				<version>${tomcatVersion}</version>
+				<version>${org.apache.tomcat}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>tomcat-catalina-ha</artifactId>
-				<version>${tomcatVersion}</version>
+				<version>${org.apache.tomcat}</version>
 			</dependency>
 
 			<!-- <dependency> <groupId>tomcat</groupId> <artifactId>tomcat-juli</artifactId> 
@@ -886,49 +896,92 @@
 				<version>2.0</version>
 			</dependency>
 
-			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<!-- if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core" -->
-				<artifactId>jersey-container-servlet</artifactId>
-				<version>2.6</version>
-			</dependency>
+			<!-- <dependency> <groupId>org.glassfish.jersey.containers</groupId> if 
+				your container implements Servlet API older than 3.0, use "jersey-container-servlet-core" 
+				<artifactId>jersey-container-servlet</artifactId> <version>2.6</version> 
+				</dependency> -->
 
 			<dependency>
 				<groupId>org.glassfish.jersey.media</groupId>
 				<artifactId>jersey-media-json-jackson</artifactId>
-				<version>2.6</version>
+				<version>${jersey.version}</version>
+			</dependency>
+
+			<!-- <dependency> <groupId>org.glassfish.jersey.containers</groupId> <artifactId>jersey-container-jetty-servlet</artifactId> 
+				<version>2.6</version> </dependency> <dependency> <groupId>org.glassfish.jersey.ext</groupId> 
+				<artifactId>jersey-bean-validation</artifactId> <version>2.6</version> </dependency> -->
+
+			<!-- <dependency> <groupId>org.glassfish.jersey.test-framework.providers</groupId> 
+				<artifactId>jersey-test-framework-provider-grizzly2</artifactId> <version>2.6</version> 
+				<scope>test</scope> </dependency> <dependency> <groupId>org.glassfish.jersey.test-framework</groupId> 
+				<artifactId>jersey-test-framework-core</artifactId> <version>2.6</version> 
+				<scope>test</scope> </dependency> <dependency> <groupId>org.glassfish.jersey.containers</groupId> 
+				<artifactId>jersey-container-grizzly2-servlet</artifactId> <version>2.6</version> 
+				</dependency> -->
+
+
+			<!-- Spring Dependencies -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring.data.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-jetty-servlet</artifactId>
-				<version>2.6</version>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.glassfish.jersey.ext</groupId>
-				<artifactId>jersey-bean-validation</artifactId>
-				<version>2.6</version>
+				<artifactId>jersey-spring3</artifactId>
+				<version>${jersey.version}</version>
+				<!-- jersey-spring uses spring 2.5, we want to use 4.x instead -->
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-web</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-beans</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-context</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-aop</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 			<dependency>
-				<groupId>org.glassfish.jersey.test-framework.providers</groupId>
-				<artifactId>jersey-test-framework-provider-grizzly2</artifactId>
-				<version>2.6</version>
-				<scope>test</scope>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.glassfish.jersey.test-framework</groupId>
-				<artifactId>jersey-test-framework-core</artifactId>
-				<version>2.6</version>
-				<scope>test</scope>
+				<groupId>org.springframework.retry</groupId>
+				<artifactId>spring-retry</artifactId>
+				<version>${spring.retry.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-grizzly2-servlet</artifactId>
-				<version>2.6</version>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.8.8</version>
 			</dependency>
 
 		</dependencies>
@@ -1072,10 +1125,15 @@
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javaCompilerVersion>1.7</javaCompilerVersion>
+		<spring.version>4.1.9.RELEASE</spring.version>
+		<spring.security.version>4.0.2.RELEASE</spring.security.version>
+		<spring.data.version>1.9.2.RELEASE</spring.data.version>
+		<spring.retry.version>1.1.2.RELEASE</spring.retry.version>
+		<jersey.version>2.22.1</jersey.version>
 		<quartzVersion>2.2.1</quartzVersion>
 		<shiroVersion>1.2.1</shiroVersion>
 		<slf4jVersion>1.7.6</slf4jVersion>
-		<tomcatVersion>7.0.34</tomcatVersion>
+		<org.apache.tomcat>7.0.68</org.apache.tomcat>
 		<jacksonVersion>2.2.1</jacksonVersion>
 		<!-- <skipITs>false</skipITs> -->
 		<camel-version>2.13.0</camel-version>
